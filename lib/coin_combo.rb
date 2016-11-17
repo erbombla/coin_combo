@@ -7,24 +7,28 @@ class Fixnum
     max = maximum
     until counter == 0
       if (counter / 25 >= 1 and max[0]>0)
-        until max[0]==0
+        while max[0]>0 and counter / 25 >= 1
+          puts counter
           change[0]+=1
           counter = counter - 25
           max[0]-=1
         end
       elsif (counter / 10 >= 1 and max[1]>0)
-        until max[1]==0
+        while max[1]>0 and counter / 10 >= 1
+          puts counter
           change[1]+=1
           counter = counter - 10
           max[1]-=1
         end
       elsif (counter / 5 >= 1 and max[2]>0)
-        until max[2]==0
+        while max[2]>0 and counter / 5 >= 1
+          puts counter
           change[2]+=1
           counter = counter - 5
           max[2]-=1
         end
       elsif (counter / 1 >= 1 and max[3]>0)
+        puts counter
           change[3]+=1
           counter = counter - 1
           max[3]-=1
@@ -34,5 +38,4 @@ class Fixnum
     change
   end
 end
-
- # print .get_change([1,5,5,99999])
+ print 3.get_change([1,1,5,99999])

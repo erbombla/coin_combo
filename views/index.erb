@@ -1,0 +1,25 @@
+<div>
+  <form class="form-group" action="/output">
+      <label for="input_change">Please enter ammount of cents</label>
+      <input type="number" name="input_change" value="0">
+
+      <label for="max_quarters">Maximum Quarters</label>
+      <input type="number" name="max_quarters" value="9999">
+
+      <label for="max_dimes">Maximum Dimes</label>
+      <input type="number" name="max_dimes" value="9999">
+
+      <label for="max_nickels">Maximum Nickles</label>
+      <input type="number" name="max_nickels" value="9999">
+
+      <button type="submit" name="button" class="btn btn-success">Submit</button>
+  </form>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">Here's your change</div>
+  <div class="panel-body">
+    <span class="glyphicon glyphicon-usd" aria-hidden="true"></span>
+      <%=@dollars%> = <%=@quarters%> quarters, <%=@nickels%> nickels, <%=@dimes%> dimes and <%=@pennies%> pennies
+  </div>
+</div>
